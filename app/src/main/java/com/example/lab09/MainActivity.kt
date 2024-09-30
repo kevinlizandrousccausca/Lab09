@@ -1,11 +1,12 @@
 package com.example.lab09
 
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Favorite
 import androidx.compose.material.icons.outlined.Home
@@ -19,6 +20,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavHostController
@@ -29,9 +31,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.reflect.Modifier
-import androidx.compose.foundation.layout.fillMaxSize
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +69,7 @@ fun BarraSuperior() {
         )
     )
 }
+
 @Composable
 fun BarraInferior(navController: NavHostController) {
     NavigationBar(
@@ -89,6 +89,7 @@ fun BarraInferior(navController: NavHostController) {
         )
     }
 }
+
 @Composable
 fun Contenido(
     pv: PaddingValues,
@@ -115,7 +116,6 @@ fun Contenido(
         }
     }
 }
-
 @Composable
 fun ScreenInicio() {
     Text("INICIO")
