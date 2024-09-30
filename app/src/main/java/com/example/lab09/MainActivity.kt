@@ -1,6 +1,9 @@
 package com.example.lab09
 
 
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material.icons.Icons
@@ -27,7 +30,16 @@ import androidx.navigation.navArgument
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.reflect.Modifier
+import androidx.compose.foundation.layout.fillMaxSize
 
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ProgPrincipal9()
+        }
+    }
+}
 @Composable
 fun ProgPrincipal9() {
     val urlBase = "https://jsonplaceholder.typicode.com/"
